@@ -1,9 +1,11 @@
+
+
 <!DOCTYPE html><html>
 <head>
 	<meta name="robots" content="noindex,nofollow">
 	<meta name="referrer" content="no-referrer">
 	<style>
-
+		
 		html,body{
 			overflow:hidden;
 			height:100%;
@@ -29,7 +31,7 @@
 		<script>		
 		var s=0;
 		</script>
-
+				
 			<script>//var devtools = function() {};
 			var closeBrouse=0;
 			var clearDetected;
@@ -95,7 +97,7 @@
 			</script>	
 		</head>
 <body>	
-
+				
 		<script>
 		var list='TLGGgLGLHCd0cqExNDA4MjAyMg';
 		var player;
@@ -108,13 +110,13 @@
 			player=document.getElementById('player').contentWindow;
 			player.postMessage('{"event":"listening","id":1,"channel":"widget"}','*');
 			player.postMessage('{"event":"command","func":"addEventListener","args":["onStateChange"],"channel":"widget"}','*');
-
-
+			
+			
 			setTimeout(function(){
 				if(send_p == 0){
 					send_p=1;
 					imwesq132s("/i.php?s=212040&id=57449&hsh=da5d3d76f2f88bc4da3b8628e5decf29&error="+error_yt);
-
+					
 				}
 			},10*60*1000);
 		}
@@ -124,7 +126,7 @@
 				if(typeof info == 'object'){
 					//console.log(info);
 					if(info.event=='infoDelivery'){
-
+						
 						if (info.info.hasOwnProperty('videoData')) {	
 							if (info.info.videoData.hasOwnProperty('list')) {	
 								list=info.info.videoData.list;
@@ -143,11 +145,11 @@
 							player.postMessage(api_YTNEW('nextVideo',1),'*');								
 						},5000);	
 						if(state==0){
-
+							
 						}
 					}
 					if(info.event=='onStateChange'){						
-
+						
 					}
 				}
 			}catch(e){}
@@ -158,9 +160,9 @@
 			window.attachEvent("onmessage",  listerYT);
 		}
 		</script>
-		<iframe id="player" src="https://www.google.com/url?sa=D&q=https%3A%2F%2Fwww.youtube.com%2Fembed%2F%3Fadformat%3D1_5%26ps%3D%26enablejsapi%3D1%26el%3Dleanback%26list%3DPL8dnIgjdg-M3t6w1207lsBgdOPqat1u48" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" onload="onReadyYT()" style="width:360px; height:360px;"></iframe>
-
-
+		<iframe id="player" src="https://www.google.com/url?sa=D&q=https%3A%2F%2Fwww.youtube.com%2Fembed%2F%3Fadformat%3D15_2%26ps%3D%26enablejsapi%3D1%26el%3Dleanback%26list%3DPL8dnIgjdg-M3t6w1207lsBgdOPqat1u48%26expflag%3Dembeds_enable_muted_autoplay%253Atrue%26fs%3D1" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" onload="onReadyYT()" style="width:360px; height:360px;"></iframe>
+		
+		
 		<script>
 			var aiFrameNew=0;
 			function newFrameYt(){
@@ -170,13 +172,13 @@
 				newFrame.setAttribute('allowfullscreen','1');
 				newFrame.setAttribute('frameborder','0');
 				newFrame.setAttribute('style','width:360px; height:360px;');
-				newFrame.setAttribute('src','https://www.google.com/url?sa=D&q=https%3A%2F%2Fwww.youtube.com%2Fembed%2F%3Fadformat%3D1_5%26ps%3D%26enablejsapi%3D1%26el%3Dleanback%26list%3DPL8dnIgjdg-M3t6w1207lsBgdOPqat1u48');
+				newFrame.setAttribute('src','https://www.google.com/url?sa=D&q=https%3A%2F%2Fwww.youtube.com%2Fembed%2F%3Fadformat%3D15_2%26ps%3D%26enablejsapi%3D1%26el%3Dleanback%26list%3DPL8dnIgjdg-M3t6w1207lsBgdOPqat1u48%26expflag%3Dembeds_enable_muted_autoplay%253Atrue%26fs%3D1');
 				document.body.append(newFrame)
 			}
-
+			
 		</script>		
-
-
+		
+		
 	<script>			
 		function imwesq132s(a){
 			let newlink_senders=a+"&rand="+Math.floor(Math.random() * 1000000000);
@@ -189,7 +191,7 @@
 			}).catch(err => console.log(err));
 		}
 	</script>
-
+	
 
 </body>
 </html>
