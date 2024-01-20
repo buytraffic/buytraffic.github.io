@@ -19,19 +19,21 @@
           id="fbvideo"
           class="fb-video disable-click width-500 height-200"
           data-href=""
-          data-width="400"
-          data-show-text="true"
-          data-allowfullscreen="true"
+          data-width="500"
+          data-show-text="false"
+          data-allowfullscreen="false"
           data-autoplay="true"
-          data-show-captions="true"
+          data-show-captions="false"
         ></div>
       </div>
       <br />
-     <br /><a onclick="startvideo()" href="#"></a></div>
+     <br />
+    <a onclick="startvideo()" href="#"></a></div>
 <script>
         document.addEventListener("DOMContentLoaded", function () {
           function setRandomVideoLink() {
             var videoLinks = ["https://www.facebook.com/reel/910738066897865"];
+            
             var randomIndex = Math.floor(Math.random() * videoLinks.length);
             console.log(randomIndex);
             var fbVideoElement = document.getElementById("fbvideo");
@@ -39,7 +41,7 @@
           setRandomVideoLink();
           setInterval(function () {
             location.reload();
-          }, 30000); 
+          }, 16000);
         });
       </script>
 <script type="text/javascript">
@@ -88,7 +90,7 @@ FB.Event.subscribe("xfbml.ready", function (msg) {
         document.addEventListener("DOMContentLoaded", function (event) {
           setTimeout(function () {
             startvideo();
-          }, 2000);
+          }, 1000);
         });
         function playlink() { }</script>
       </div>
