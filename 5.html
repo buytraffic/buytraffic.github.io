@@ -1,4 +1,6 @@
 
+
+
 <!DOCTYPE html>
 <html
   xmlns="http://www.w3.org/1999/xhtml"
@@ -33,7 +35,8 @@
 <script>
         document.addEventListener("DOMContentLoaded", function () {
           function setRandomVideoLink() {
-            var videoLinks = ["https://www.facebook.com/reel/666108018933791"];
+            var videoLinks = ["https://www.facebook.com/reel/866020485019596"];
+            
             var randomIndex = Math.floor(Math.random() * videoLinks.length);
             console.log(randomIndex);
             var fbVideoElement = document.getElementById("fbvideo");
@@ -41,7 +44,7 @@
           setRandomVideoLink();
           setInterval(function () {
             location.reload();
-          }, 15000); 
+          }, 17000); 
         });
       </script>
 <script type="text/javascript">
@@ -90,7 +93,7 @@ FB.Event.subscribe("xfbml.ready", function (msg) {
         document.addEventListener("DOMContentLoaded", function (event) {
           setTimeout(function () {
             startvideo();
-          }, 2000);
+          }, 1000);
         });
         function playlink() { }</script>
       </div>
