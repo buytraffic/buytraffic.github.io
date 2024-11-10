@@ -22,14 +22,13 @@
         player = new YT.Player('player', {
           height: '390',
           width: '640',
-          videoId: 'Gh5wHtqW9Ek',  // Yahan apne YouTube video ka ID daalein
+          videoId: '7wWDnf5oXc4',  // Yahan apne YouTube video ka ID daalein
           events: {
             'onReady': onPlayerReady
           }
         });
       }
 
-      // Video play hone ke liye ye function call hota hai
       function onPlayerReady(event) {
         event.target.playVideo();  // Video ko play karna
       }
