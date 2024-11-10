@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Auto Play Example</title>
+</head>
+<body>
+
+    <!-- YouTube Player -->
+    <div id="player"></div>
+
+    <!-- Load YouTube IFrame API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <script>
+      // Player variable
+      var player;
+
+      // YouTube IFrame API ready hone par ye function call hoga
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: 'Gh5wHtqW9Ek',  // Yahan apne YouTube video ka ID daalein
+          events: {
+            'onReady': onPlayerReady
+          }
+        });
+      }
+
+      // Video play hone ke liye ye function call hota hai
+      function onPlayerReady(event) {
+        event.target.playVideo();  // Video ko play karna
+      }
+    </script>
+
+</body>
+</html>
