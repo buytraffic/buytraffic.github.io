@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Playlist Autoplay Embedded Example</title>
+</head>
+<body>
+
+    <!-- YouTube Player -->
+    <div id="player"></div>
+
+    <!-- Load YouTube IFrame API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <script>
+      // Player variable
+      var player;
+
+      // YouTube IFrame API ready hone par ye function call hoga
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          playerVars: {
+            'playlist': 'p-7ty-n_lt0,p-7ty-n_lt0',  // Yahan apne playlist ke video IDs daalein (comma se separate)
+            'autoplay': 1,       // Autoplay enable
+            'mute': 1,           // Mute video (optional, to bypass autoplay restrictions)
+            'loop': 1,           // Playlist ko loop karna (optional)
+            'rel': 0,            // Recommended videos ko disable karna
+            'showinfo': 0,       // Video information ko hide karna
+            'modestbranding': 1  // YouTube branding ko hide karna
+          },
+          events: {
+            'onReady': onPlayerReady,        // Player ready hone par yeh call hota hai
+            'onStateChange': onPlayerStateChange,  // Video state change hone par
+            'onError': onPlayerError         // Error handling ke liye
+          }
+        });
+      }
+
+      // Video play hone ke liye ye function call hota hai
+      function onPlayerReady(event) {
+        event.target.playVideo();  // Video ko play karna
+      }
+
+      // Player state change hone par ye function call hota hai
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          console.log('Video is playing');
+        } else if (event.data == YT.PlayerState.PAUSED) {
+          console.log('Video is paused');
+        } else if (event.data == YT.PlayerState.ENDED) {
+          console.log('Video has ended');
+        }
+      }
+
+      // Video player mein error hone par ye function call hota hai
+      function onPlayerError(event) {
+        console.log('Error occurred: ' + event.data);
+      }
+    </script>
+
+</body>
+</html>
