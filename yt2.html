@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Auto Play Example</title>
+    <title>YouTube Playlist Autoplay Example</title>
 </head>
 <body>
 
@@ -22,13 +22,19 @@
         player = new YT.Player('player', {
           height: '390',
           width: '640',
-          videoId: '7wWDnf5oXc4',  // Yahan apne YouTube video ka ID daalein
+          playerVars: {
+            'playlist': '7wWDnf5oXc4,7wWDnf5oXc4',  // Yahan apne playlist ke video IDs daalein (comma se separate)
+            'autoplay': 1,      // Autoplay enable
+            'mute': 1,          // Mute video (optional, to bypass autoplay restrictions)
+            'loop': 1           // Playlist ko loop karna (optional)
+          },
           events: {
             'onReady': onPlayerReady
           }
         });
       }
 
+      // Video play hone ke liye ye function call hota hai
       function onPlayerReady(event) {
         event.target.playVideo();  // Video ko play karna
       }
